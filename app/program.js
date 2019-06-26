@@ -1,4 +1,4 @@
-var OSinfo = require('./OSinfo');
+var OSinfo = require('./modules/OSinfo');
 
 process.stdin.setEncoding('utf-8');
 process.stdin.on('readable', function() {
@@ -13,11 +13,11 @@ process.stdin.on('readable', function() {
             case '/sayhello':
                 process.stdout.write('hello!\n');
                 break;
-            default:
-                process.stderr.write('Wrong instruction!\n');
             case '/getOSinfo':
                 OSinfo.print();
-            break;
+                break;
+            default:
+                process.stderr.write('Wrong instruction!\n');
         };
     }
 });
