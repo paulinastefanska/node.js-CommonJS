@@ -1,4 +1,5 @@
 var os = require('os');
+var timeConver = require("./timeConver");
 
 function getOSinfo() {
     var type = os.type();
