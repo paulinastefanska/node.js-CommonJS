@@ -1,5 +1,3 @@
-var os = require('os');
-
 process.stdin.setEncoding('utf-8');
 process.stdin.on('readable', function() {
     var input = process.stdin.read();
@@ -16,8 +14,8 @@ process.stdin.on('readable', function() {
             default:
                 process.stderr.write('Wrong instruction!\n');
             case '/getOSinfo':
-                process.stdout.write('Tutaj będzie info o systemie!\n');
-                break;
+                getOSinfo();
+            break;
         };
     }
 });
