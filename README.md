@@ -1,2 +1,2 @@
 # node.js-CommonJS
-use first os module
+Used OS module and wrote own module for time convert. <br>
